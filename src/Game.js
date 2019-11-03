@@ -6,21 +6,6 @@ import { getCategorySets, getAvatars, setCompetitorQuestions } from './helpers/g
 import './styles/gamestyles.css';
 import './styles/loader.css';
 
-// consider higher order components and hooks
-/////////////
-
-// features:
-// created with create-react-app
-// axios
-// localStorage
-// API for questions, and for names
-// functional and class based components
-// pure component
-// Bootstrap 4
-// SASS
-// ES6
-//
-
 class Game2 extends React.Component {
 	constructor(props) {
 		super(props);
