@@ -1,0 +1,226 @@
+$secondary-bg: rgba(255, 255, 255, .5);
+$font: 'Catamaran', sans-serif;
+$green: #a5b538;
+$light-green: #c5d434;
+
+body {
+	font-family: $font;
+}
+.full-height {
+	height: 100vh;
+}
+.show_true {
+	display: block;
+}
+.show_false {
+	display: none;
+}
+.isCorrect_true {
+	color: green;
+}
+.isCorrect_false {
+	color: red;
+}
+.title {
+	font-size: 5rem;
+	font-weight: 700;
+	color: $light-green;
+}
+.game-btn,
+.game-btn:disabled {
+	background: $green;
+	font-weight: bold;
+	border: none;
+	color: white;
+	&:not(:disabled):hover {
+		background: white;
+		color: $green;
+	}
+	&:disabled {
+		opacity: .5;
+	}
+}
+.GameHeader {
+	.tick {
+		font-size: 35%;
+	}
+	.bulb {
+		width: 30px;
+		height: 30px;
+		background: #ffeaa7;
+		box-shadow: 0 0 10px #ffeaa7, 0 0 20px #ffeaa7, 0 0 30px #ffeaa7, 0 0 30px #ffeaa7;
+	}
+}
+
+#intro {
+	animation-delay: 10s;
+	.lights {
+		position: absolute;
+		margin-top: 5rem;
+		.bulb {
+			opacity: 0;
+			width: 30px;
+			height: 30px;
+			background: #ffeaa7;
+			box-shadow: 0 0 10px #ffeaa7, 0 0 20px #ffeaa7, 0 0 30px #ffeaa7, 0 0 40px #ffeaa7;
+			animation: bulb-glow 2s infinite;
+		}
+		.bulb1,
+		.bulb3,
+		.bulb5,
+		.bulb7 {
+			animation-delay: 4s;
+		}
+		.bulb2,
+		.bulb4,
+		.bulb6 {
+			animation-delay: 5s;
+		}
+	}
+}
+#picker {
+	.container {
+		background-color: $secondary-bg;
+		.avatar {
+			height: 50px;
+			width: 50px;
+			display: block;
+		}
+		#playBtn {
+			display: flex;
+			justify-content: center;
+			button {
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.avatar1 {
+	background: url("../images/avatar1.png") no-repeat bottom;
+	background-size: contain;
+}
+.avatar2 {
+	background: url("../images/avatar2.png") no-repeat bottom;
+	background-size: contain;
+}
+.avatar3 {
+	background: url("../images/avatar3.png") no-repeat bottom;
+	background-size: contain;
+}
+.avatar4 {
+	background: url("../images/avatar4.png") no-repeat bottom;
+	background-size: contain;
+}
+
+.QuestionCard {
+	background-color: rgba(212, 247, 239, 1.0);
+	border-right: 1px solid rgba(115, 197, 180, .5);
+	border-bottom: 1px solid rgba(115, 197, 180, .5);
+	border-top: 2px solid rgba(255, 255, 255, .5);
+	border-left: 2px solid rgba(255, 255, 255, .5);
+	color: #308c7b;
+	font-weight: 600;
+	&:hover {
+		color: #56b6b2;
+		cursor: pointer;
+	}
+}
+
+.GameBoard {
+	.category {
+		a {
+			text-decoration: none;
+		}
+		.category-title {
+			font-weight: bold;
+			min-height: 3rem;
+			font-size: 1.15rem;
+			line-height: 1.1;
+		}
+	}
+	.avatar {
+		height: 63px;
+		width: 63px;
+		display: block;
+	}
+	.avatar-set {
+		font-size: 1.1rem;
+		border-bottom: 1px solid white;
+		padding-top: .75rem;
+		padding-bottom: .75rem;
+	}
+	.avatar-set:last-child {
+		border: none;
+	}
+	.user-avatar {
+		padding-top: 1rem;
+	}
+}
+.isQuestion_false {
+	background-color: $secondary-bg;
+}
+.isQuestion_true {
+	background-color: rgba(212, 247, 239, 1.0);
+	.question {
+		width: 100%;
+		min-height: 22.25rem;
+	}
+	legend {
+		width: 75%;
+		font-weight: bold;
+		font-size: 1.25rem;
+	}
+	.points {
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+	.custom-control-input:checked ~ .custom-control-label::before,
+	.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
+		background: #d5df7c;
+	}
+	.feedback {
+		position: absolute;
+		top: 8rem;
+		left: 17rem;
+		min-height: 7rem;
+	}
+}
+
+.GameEnd {
+	.card {
+		background: rgba(255, 255, 255, .75);
+		.fa-award {
+			font-size: 5rem;
+			color: #00a5ff;
+		}
+		.place-0 {
+			color: #00a5ff;
+		}
+		.place-1 {
+			color: #d30531;
+		}
+		.place-2 {
+			color: gold;
+		}
+		.place-3 {
+			color: rgb(2, 172, 2);
+		}
+		.card-footer {
+			background: $secondary-bg;
+			font-weight: 600;
+			font-size: 1.15rem;
+		}
+	}
+}
+@keyframes bulb-glow {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
