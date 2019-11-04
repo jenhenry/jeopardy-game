@@ -6,3 +6,6 @@ This is my very first project using React. This quiz game has the following feat
 4. Includes functional, class based, and pure components
 5. Uses Bootstrap 4
 6. Utilizes new features in ES6
+
+STILL TO DO
+* Make responsive
