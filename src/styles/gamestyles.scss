@@ -41,10 +41,17 @@ body {
 	}
 }
 .GameHeader {
+	justify-content: space-between;
+	align-items: center;
+	line-height: 1.4;
+	.title {
+		min-width: fit-content;
+	}
 	.tick {
 		font-size: 35%;
 	}
 	.bulb {
+		margin-left: 1.5rem;
 		width: 30px;
 		height: 30px;
 		background: #ffeaa7;
@@ -54,9 +61,16 @@ body {
 
 #intro {
 	animation-delay: 10s;
+	.intro-title {
+		line-height: 1.2;
+	}
 	.lights {
 		position: absolute;
-		margin-top: 5rem;
+		padding-top: 17rem;
+		// Medium devices (tablets, 768px and up)
+		@media (min-width: 768px) {
+			padding-top: 10rem;
+		}
 		.bulb {
 			opacity: 0;
 			width: 30px;

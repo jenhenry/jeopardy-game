@@ -19,16 +19,22 @@ class Question extends React.Component {
 		disableBtn = true;
 		disableForm = true;
 		this.setState({ answered: true });
+		// this.props.recordAnswer({
+		// 	answered: true,
+		// 	isCorrect: this.state.userAnswer,
+		// 	id: this.props.id,
+		// 	cat: this.props.questionData.catId
+		// });
+	}
+	handleClose() {
+		disableBtn = true;
+		disableForm = false;
 		this.props.recordAnswer({
 			answered: true,
 			isCorrect: this.state.userAnswer,
 			id: this.props.id,
 			cat: this.props.questionData.catId
 		});
-	}
-	handleClose() {
-		disableBtn = true;
-		disableForm = false;
 		this.props.handleClose();
 	}
 	handleChange(e) {

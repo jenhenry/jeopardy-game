@@ -6,7 +6,7 @@ import { getCategorySets, getAvatars, setCompetitorQuestions } from './helpers/g
 import './styles/gamestyles.css';
 import './styles/loader.css';
 
-class Game2 extends React.Component {
+class Game extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -210,4 +210,4 @@ class Game2 extends React.Component {
 	}
 }
 
-export default Game2;
+export default Game;
