@@ -2,6 +2,7 @@ $secondary-bg: rgba(255, 255, 255, .5);
 $font: 'Catamaran', sans-serif;
 $green: #a5b538;
 $light-green: #c5d434;
+$title-color: #fce410;
 
 body {
 	font-family: $font;
@@ -24,7 +25,7 @@ body {
 .title {
 	font-size: 5rem;
 	font-weight: 700;
-	color: $light-green;
+	color: $title-color;
 }
 .game-btn,
 .game-btn:disabled {
