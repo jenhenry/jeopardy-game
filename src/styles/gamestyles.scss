@@ -23,7 +23,7 @@ body {
 	color: red;
 }
 .title {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-weight: 700;
 	color: $title-color;
 }
@@ -44,7 +44,7 @@ body {
 .GameHeader {
 	justify-content: space-between;
 	align-items: center;
-	line-height: 1.4;
+	line-height: 1;
 	.title {
 		min-width: fit-content;
 	}
@@ -57,6 +57,9 @@ body {
 		height: 30px;
 		background: #ffeaa7;
 		box-shadow: 0 0 10px #ffeaa7, 0 0 20px #ffeaa7, 0 0 30px #ffeaa7, 0 0 30px #ffeaa7;
+	}
+	.bulbs {
+		display: none !important;
 	}
 }
 
@@ -147,10 +150,11 @@ body {
 		a {
 			text-decoration: none;
 		}
+
 		.category-title {
 			font-weight: bold;
-			min-height: 3rem;
-			font-size: 1.15rem;
+			min-height: 2rem;
+			font-size: .75rem;
 			line-height: 1.1;
 		}
 	}
@@ -160,10 +164,11 @@ body {
 		display: none;
 	}
 	.avatar-set {
-		font-size: 1.1rem;
-		padding-top: .75rem;
-		padding-bottom: .75rem;
+		font-size: .75rem;
+		padding-top: .5rem;
+		padding-bottom: .2rem;
 	}
+
 	.avatar-set:last-child {
 		border: none;
 	}
@@ -255,11 +260,27 @@ body {
 		opacity: 0;
 	}
 }
+
 @media (min-width: 576px) {
 	.title {
 		font-size: 3rem;
 	}
+	.GameHeader {
+		line-height: 1.4;
+		.bulbs {
+			display: flex;
+		}
+	}
+	.GameBoard {
+		.category {
+			.category-title {
+				min-height: 3rem;
+				font-size: 1.15rem;
+			}
+		}
+	}
 }
+
 @media (min-width: 768px) {
 	.title {
 		font-size: 5rem;
@@ -268,9 +289,13 @@ body {
 		.avatar {
 			display: block;
 		}
+
 		.avatar-set {
 			display: flex;
 			border-bottom: 1px solid white;
+			font-size: 1.1rem;
+			padding-top: .75rem;
+			padding-bottom: .75rem;
 		}
 		.contestants {
 			display: block;

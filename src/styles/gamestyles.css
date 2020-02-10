@@ -23,7 +23,7 @@ body {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #fce410;
 }
@@ -54,7 +54,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 .GameHeader .title {
@@ -74,6 +74,10 @@ body {
   background: #ffeaa7;
   -webkit-box-shadow: 0 0 10px #ffeaa7, 0 0 20px #ffeaa7, 0 0 30px #ffeaa7, 0 0 30px #ffeaa7;
           box-shadow: 0 0 10px #ffeaa7, 0 0 20px #ffeaa7, 0 0 30px #ffeaa7, 0 0 30px #ffeaa7;
+}
+
+.GameHeader .bulbs {
+  display: none !important;
 }
 
 #intro {
@@ -186,8 +190,8 @@ body {
 
 .GameBoard .category .category-title {
   font-weight: bold;
-  min-height: 3rem;
-  font-size: 1.15rem;
+  min-height: 2rem;
+  font-size: .75rem;
   line-height: 1.1;
 }
 
@@ -198,9 +202,9 @@ body {
 }
 
 .GameBoard .avatar-set {
-  font-size: 1.1rem;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  font-size: .75rem;
+  padding-top: .5rem;
+  padding-bottom: .2rem;
 }
 
 .GameBoard .avatar-set:last-child {
@@ -333,6 +337,18 @@ body {
   .title {
     font-size: 3rem;
   }
+  .GameHeader {
+    line-height: 1.4;
+  }
+  .GameHeader .bulbs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .GameBoard .category .category-title {
+    min-height: 3rem;
+    font-size: 1.15rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -347,6 +363,9 @@ body {
     display: -ms-flexbox;
     display: flex;
     border-bottom: 1px solid white;
+    font-size: 1.1rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
   }
   .GameBoard .contestants {
     display: block;
