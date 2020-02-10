@@ -69,12 +69,12 @@ class GameBoard extends React.Component {
 			return <GameEnd avatar={avatar} username={username} avatar_sets={avatar_sets} score={score} />;
 		} else {
 			return (
-				<div className="GameBoard full-height p-3 bg-info">
+				<div className='GameBoard full-height p-3 bg-info'>
 					<GameHeader />
-					<div className="row">
-						<div className="col">
+					<div className='row mainboard'>
+						<div className='col'>
 							<div className={`board container border text-center rounded isQuestion_${this.state.open}`}>
-								<div className="row">
+								<div className='row'>
 									{this.state.open ? (
 										<Question
 											id={this.state.openQuestion}
@@ -89,18 +89,26 @@ class GameBoard extends React.Component {
 								</div>
 							</div>
 						</div>
-						<div className="col col-4">
-							<div className="board container border rounded pb-1">
+						<div className='col col-md-4 col-12'>
+							<div className='board container border rounded pb-1 contestants'>
 								<Contestant avatarImg={avatar} avatarName={username} score={score} />
 								{this.assembleContestants()}
 							</div>
 							<button
 								onClick={this.restart}
-								className="game-btn d-flex btn btn-secondary mt-3 mx-auto px-5 pt-2 shadow-sm"
+								className='game-btn game-btn-inline d-flex btn btn-secondary mt-3 mx-auto px-5 pt-2 shadow-sm'
 							>
 								Start Over
 							</button>
 						</div>
+					</div>
+					<div className='row startover'>
+						<button
+							onClick={this.restart}
+							className='game-btn d-flex btn btn-secondary mt-3 mx-auto px-5 pt-2 shadow-sm'
+						>
+							Start Over
+						</button>
 					</div>
 				</div>
 			);
@@ -112,8 +120,8 @@ class GameBoard extends React.Component {
 
 		return category_sets.map((cat) => {
 			return (
-				<div className="category col-3 p-3" key={cat.id}>
-					<div className="category-title d-flex justify-content-center align-items-center">{cat.title}</div>
+				<div className='category col-3 p-3' key={cat.id}>
+					<div className='category-title d-flex justify-content-center align-items-center'>{cat.title}</div>
 
 					{cat.questions.map((q) => {
 						return (
