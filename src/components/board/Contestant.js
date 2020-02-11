@@ -6,7 +6,7 @@ class Contestant extends React.PureComponent {
 		return (
 			<div className='avatar-set align-items-center'>
 				<div className={`avatar ${avatarImg} rounded-circle bg-light mr-3 shadow`} />
-				<div className='text-white'>
+				<div className='text-white avatar-text'>
 					<span>{avatarName}:</span>
 					<span className='ml-2'>{score}</span>
 				</div>

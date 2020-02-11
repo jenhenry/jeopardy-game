@@ -17,10 +17,10 @@ body {
 	display: none;
 }
 .isCorrect_true {
-	color: green;
+	color: green !important;
 }
 .isCorrect_false {
-	color: red;
+	color: red !important;
 }
 .title {
 	font-size: 2.5rem;
@@ -33,6 +33,7 @@ body {
 	font-weight: bold;
 	border: none;
 	color: white;
+	font-size: .75rem;
 	&:not(:disabled):hover {
 		background: white;
 		color: $green;
@@ -139,9 +140,14 @@ body {
 	border-left: 2px solid rgba(255, 255, 255, .5);
 	color: #308c7b;
 	font-weight: 600;
+	font-size: .75rem;
+	padding: .5rem;
 	&:hover {
 		color: #56b6b2;
 		cursor: pointer;
+	}
+	.fa-question-circle {
+		color: #17a2b8;
 	}
 }
 
@@ -153,9 +159,10 @@ body {
 
 		.category-title {
 			font-weight: bold;
-			min-height: 2rem;
+			min-height: 2.75rem;
 			font-size: .75rem;
 			line-height: 1.1;
+			margin-top: .5rem;
 		}
 	}
 	.avatar {
@@ -168,9 +175,13 @@ body {
 		padding-top: .5rem;
 		padding-bottom: .2rem;
 	}
-
 	.avatar-set:last-child {
 		border: none;
+	}
+	.avatar-text {
+		display: flex;
+		flex-direction: column;
+		line-height: 1;
 	}
 	.user-avatar {
 		padding-top: 1rem;
@@ -261,22 +272,40 @@ body {
 	}
 }
 
+@media (min-width: 360px) {
+	.fas {
+		margin-right: .25rem;
+	}
+}
+
 @media (min-width: 576px) {
+	.game-btn,
+	.game-btn:disabled {
+		font-size: 1rem;
+	}
 	.title {
 		font-size: 3rem;
 	}
 	.GameHeader {
 		line-height: 1.4;
 		.bulbs {
-			display: flex;
+			display: flex !important;
 		}
 	}
 	.GameBoard {
 		.category {
+			padding: 1rem;
+			margin-top: 0;
 			.category-title {
 				min-height: 3rem;
 				font-size: 1.15rem;
+				margin-top: 0;
 			}
+		}
+		.avatar-text {
+			display: flex;
+			flex-direction: row;
+			line-height: inherit;
 		}
 	}
 }
@@ -289,7 +318,6 @@ body {
 		.avatar {
 			display: block;
 		}
-
 		.avatar-set {
 			display: flex;
 			border-bottom: 1px solid white;
@@ -309,6 +337,10 @@ body {
 		}
 		.game-btn-inline {
 			display: block !important;
+		}
+		.QuestionCard {
+			font-size: 1rem;
+			padding: 1rem;
 		}
 	}
 }

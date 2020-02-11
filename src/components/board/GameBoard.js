@@ -120,7 +120,7 @@ class GameBoard extends React.Component {
 
 		return category_sets.map((cat) => {
 			return (
-				<div className='category col-3 p-3' key={cat.id}>
+				<div className='category col-3' key={cat.id}>
 					<div className='category-title d-flex justify-content-center align-items-center'>{cat.title}</div>
 
 					{cat.questions.map((q) => {

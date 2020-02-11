@@ -16,13 +16,13 @@ class QuestionCard extends React.Component {
 			return (
 				<div>
 					{correct === 'true' ? (
-						<div className="QuestionCard shadow-sm p-3 my-2 rounded-lg isCorrect_true" id={id}>
-							<i className="fas fa-check-circle mr-1" />
+						<div className='QuestionCard shadow-sm my-2 rounded-lg isCorrect_true' id={id}>
+							<i className='fas fa-check-circle' />
 							{value}
 						</div>
 					) : (
-						<div className="QuestionCard shadow-sm p-3 my-2 rounded-lg isCorrect_false" id={id}>
-							<i className="fas fa-times-circle mr-1" />
+						<div className='QuestionCard shadow-sm my-2 rounded-lg isCorrect_false' id={id}>
+							<i className='fas fa-times-circle' />
 							{value}
 						</div>
 					)}
@@ -31,7 +31,8 @@ class QuestionCard extends React.Component {
 		} else {
 			return (
 				<div>
-					<div className="QuestionCard shadow-sm p-3 my-2 rounded-lg" id={id} onClick={this.handleClick}>
+					<div className='QuestionCard shadow-sm my-2 rounded-lg' id={id} onClick={this.handleClick}>
+						<i class='fas fa-question-circle' />
 						{value}
 					</div>
 				</div>
